@@ -1,3 +1,11 @@
+libax25 (0.0.12-rc5+git20250922+50f8c9b-1) UNRELEASED; urgency=medium
+
+  * Import LinuxHam snapshot 50f8c9b (2025-09-22).
+  * Drop the Debian manpage-spelling patch, already included upstream.
+  * Build the LinuxHam Git checkout through the Debian Autotools sequence.
+
+ -- Lorenzo <iw3her.lorenzo@gmail.com>  Mon, 28 Sep 2026 21:46:11 +0200
+
 libax25 (0.0.12-rc5+git20230513+5581005-1) unstable; urgency=medium
 
   * Pull in latest from upstream git repo
