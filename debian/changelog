@@ -1,0 +1,264 @@
+libax25 (0.0.12-rc5+git20230513+5581005-1) unstable; urgency=medium
+
+  * Pull in latest from upstream git repo
+    - get rid of backported ttyutils patch
+  * Add in zlib compression
+  * Bump Standards 
+  * New Upstream URL
+  * Remove .la files
+  * Include building reverse dependencies in CI
+
+ -- Dave Hibberd <d@vehibberd.com>  Tue, 08 Aug 2023 21:34:45 +0100
+
+libax25 (0.0.12-rc5+git20190411+b17ff36-4) unstable; urgency=medium
+
+  * Remove colint from Uploaders, thanks for all your work!
+    - Closes: #990596
+  * Bump dh to 13
+  * Bump standards to 4.6.0.0
+  * Added Gitlab CI
+  * Added Upstream patch for long serial device symlinks
+    - Closes: #985812
+  * Added Rules-Requires-Root:no to d/control
+
+ -- Dave Hibberd <d@vehibberd.com>  Mon, 13 Sep 2021 23:53:50 +0100
+
+libax25 (0.0.12-rc5+git20190411+b17ff36-3) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set debhelper-compat version in Build-Depends.
+  * Drop unnecessary dependency on dh-autoreconf.
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Iain R. Learmonth ]
+  * Remove myself from Uploaders (Fixes: #970294)
+
+ -- Iain R. Learmonth <irl@debian.org>  Tue, 15 Sep 2020 18:53:31 +0100
+
+libax25 (0.0.12-rc5+git20190411+b17ff36-2) unstable; urgency=medium
+
+  * d/copyright: Update to DEP-5 (Fixes: #933816)
+
+ -- Iain R. Learmonth <irl@debian.org>  Sun, 04 Aug 2019 16:05:02 +0100
+
+libax25 (0.0.12-rc5+git20190411+b17ff36-1) experimental; urgency=medium
+
+  * New upstream version based on git snapshot b17ff36
+  * d/rules: Use dh sequencer
+  * d/control:
+   - Removed references to packages no longer available
+   - Updated binary description to no longer refer to old kernel versions
+   - Standards version updated to 4.4.0
+  * Maintainer scripts:
+   - Allow debhelper to handle ldconfig triggers
+
+ -- Iain R. Learmonth <irl@debian.org>  Sat, 27 Jul 2019 23:48:24 +0100
+
+libax25 (0.0.12-rc5-1) experimental; urgency=medium
+
+  * New upstream version 0.0.12-rc5.
+  * Updated to debhelper 12
+  * d/rules:
+   - Use dh_missing and fail if files are missing
+
+ -- Iain R. Learmonth <irl@debian.org>  Fri, 26 Jul 2019 18:08:45 +0100
+
+libax25 (0.0.12-rc4-2) unstable; urgency=medium
+
+  * Updated to DebHelper 11
+    - debian/control updated
+    - debian/compat updated to level 11
+  * Hardening enabled
+  * Fix FTCBFS: Let dh_auto_configure pass --host to ./configure.
+    - (Closes: #880394)
+    - Thanks to Helmut Grohne <helmut@subdivi.de>
+  * Fixed lintian Errors - trailing whitespace:
+    - debian/changelog
+    - debian/rules
+
+ -- Dave Hibberd <d@vehibberd.com>  Sat, 10 Feb 2018 14:18:45 +0000
+
+libax25 (0.0.12-rc4-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Added watch file. (Closes: #781598)
+  * Source format changed to 3.0 (quilt).
+  * debian/control:
+   - Versioned dependency on debhelper (>=9).
+   - Bumped standards version to 3.9.6.
+   - Added myself to uploaders.
+   - Removed inactive uploaders.
+  * debian/compat:
+   - Switched to level 9.
+  * debian/rules:
+   - Removed redundant --source-dir option from dh_installman.
+
+ -- Iain R. Learmonth <irl@debian.org>  Thu, 03 Sep 2015 12:29:04 +0100
+
+libax25 (0.0.12-rc2+cvs20120204-3) unstable; urgency=medium
+
+  * Bump standards version.
+  * Changed Section from hamradio to libs/libdevel.
+  * Changed Architecture: to linux-any (Closes: #745175).
+  * Use dh-autoreconf to fix build problems on newer archs
+    patch from Fernando Seiti Furusato <ferseiti@br.ibm.com>
+    (Closes: #753411).
+  * Fix many minor Lintian warnings.
+
+ -- Colin Tuckley <colint@debian.org>  Thu, 04 Sep 2014 11:16:44 +0100
+
+libax25 (0.0.12-rc2+cvs20120204-2) unstable; urgency=low
+
+  * Fix "libax25 FTBFS make: execvp: ./configure: Permission denied"
+    added chmod +x configure to debian/rules (Closes: #658770)
+
+ -- Patrick Ouellette <pouelle@debian.org>  Sun, 26 Feb 2012 20:04:08 -0500
+
+libax25 (0.0.12-rc2+cvs20120204-1) unstable; urgency=low
+
+  * new upstream
+
+ -- Patrick Ouellette <pouelle@debian.org>  Sat, 04 Feb 2012 21:50:54 -0500
+
+libax25 (0.0.11-6.1) unstable; urgency=low
+
+  * Retiring - remove myself from the uploaders list.
+
+ -- Joop Stakenborg <pa3aba@debian.org>  Sun, 15 Nov 2009 13:28:27 +0000
+
+libax25 (0.0.11-6) unstable; urgency=low
+
+  * Suggest a recent kernel in the description.
+
+ -- Joop Stakenborg <pa3aba@debian.org>  Mon, 10 Dec 2007 19:56:45 +0100
+
+libax25 (0.0.11-5) unstable; urgency=low
+
+  * Lintian fixes.
+  * Update config.guess,sub.
+  * Stop using deprecated ${Source-Version} substvar,
+    use ${binary:Version}.
+  * Remove dh_undocumented, it does nothing.
+
+ -- Joop Stakenborg <pa3aba@debian.org>  Tue, 13 Nov 2007 19:18:31 +0100
+
+libax25 (0.0.11-4) unstable; urgency=low
+
+  * Remove automake build dependency. Thanks to James Westby.
+    Closes: #377466.
+
+ -- Joop Stakenborg <pa3aba@debian.org>  Tue, 13 Nov 2007 19:11:01 +0100
+
+libax25 (0.0.11-3) unstable; urgency=low
+
+  * Changed maintainer to debian-hams@lists.debian.org
+  * Changed uploaders to Jaime Robles <jaime@debian.org>,
+    Joop Stakenborg <pa3aba@debian.org>,
+    Patrick Ouellette <pouelle@debian.org>,
+    Hamish Moffatt <hamish@debian.org>,
+    Ramakrishnan Muthukrishnan <rkrishnan@debian.org>
+
+ -- Patrick Ouellette <pouelle@debian.org>  Thu, 14 Apr 2005 13:37:17 -0400
+
+libax25 (0.0.11-2) unstable; urgency=low
+
+  * improved package description (closes: #209688)
+  * standards version 3.6.1, fixed manpage links (closes: #103924)
+
+ -- Bruce Walker <w1bw@debian.org>  Tue, 11 Nov 2003 14:08:44 -0500
+
+libax25 (0.0.11-1) unstable; urgency=low
+
+  * new upstream version
+
+ -- Bruce Walker <w1bw@debian.org>  Wed, 23 Apr 2003 09:19:20 -0400
+
+libax25 (0.0.10-4) unstable; urgency=low
+
+  * new debian maintainer (me)
+
+ -- Bruce Walker <w1bw@debian.org>  Tue,  8 Apr 2003 16:03:17 -0400
+
+libax25 (0.0.10-3) unstable; urgency=low
+
+  * fixed separation of headers and man pages between libax25 and
+    libax25-dev (closes: #181880, #181881)
+
+ -- Patrick Ouellette <pouelle@debian.org>  Wed, 19 Feb 2003 23:38:44 -0500
+
+libax25 (0.0.10-2) unstable; urgency=low
+
+  * added postrm script to remove /etc/ax25 directory when purging
+    package (closes: #159284)
+
+ -- Patrick Ouellette <pouelle@debian.org>  Fri, 20 Sep 2002 11:28:45 -0400
+
+libax25 (0.0.10-1) unstable; urgency=low
+
+  * new upstream, fixes buffer overflow in libax25io (closes: #140381)
+
+ -- Patrick Ouellette <pouelle@debian.org>  Sun,  7 Apr 2002 23:14:15 -0400
+
+libax25 (0.0.9-2) unstable; urgency=low
+
+  * added autoconf to build depends
+  * added automake to build depends
+  * added libtool to build depends
+
+ -- Patrick Ouellette <pouelle@debian.org>  Fri, 11 Jan 2002 17:06:24 -0500
+
+libax25 (0.0.9-1) unstable; urgency=low
+
+  * New upstream version
+  * Updated config.guess and config.sub for hppa (closes: #96421)
+  * Updated for new libtool
+
+ -- Patrick Ouellette <pouelle@debian.org>  Mon, 27 Aug 2001 22:35:18 -0400
+
+libax25 (0.0.8-1) unstable; urgency=low
+
+  * New upstream (closes: #64102)
+  * New maintainer (closes: #89332)
+
+ -- Patrick Ouellette <pouelle@debian.org>  Mon, 30 Apr 2001 20:43:09 -0500
+
+libax25 (0.0.7-2) unstable; urgency=low
+
+  * New standards version
+
+ -- Craig Small <csmall@debian.org>  Wed, 27 Dec 2000 16:48:47 +1100
+
+libax25 (0.0.7-1) unstable; urgency=low
+
+  * New upstream source
+
+ -- Craig Small <csmall@debian.org>  Mon, 23 Aug 1999 11:34:18 +1000
+
+libax25 (0.0.6-1) unstable; urgency=low
+
+  * New upstream version
+  * Conflicts with old ax25-tools Closes: #41044
+
+ -- Craig Small <csmall@debian.org>  Mon, 19 Jul 1999 11:02:16 +1000
+
+libax25 (0.0.5-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Craig Small <csmall@debian.org>  Wed,  7 Jul 1999 10:41:25 +1000
+
+libax25 (0.0.4-2) unstable; urgency=low
+
+  * Made the shlibs version dependent
+
+ -- Craig Small <csmall@debian.org>  Tue,  8 Jun 1999 13:34:54 +1000
+
+libax25 (0.0.4-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Craig Small <csmall@debian.org>  Mon, 31 May 1999 13:53:24 +1000
+
+Local variables:
+mode: debian-changelog
+End:

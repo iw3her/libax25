@@ -1,0 +1,4 @@
+# Upstream version has hyphen as part of -rc5
+libax25 source: hyphen-in-upstream-part-of-debian-changelog-version
+# Upstream SSL cert not valid
+libax25 source: debian-watch-uses-insecure-uri http://www.linux-ax25.org/pub/libax25/libax25-(\d.*)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))

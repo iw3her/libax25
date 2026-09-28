@@ -1,0 +1,15 @@
+Description: Fix Lintian manpage spelling errors
+Author: Dave Hibberd <d@vehibberd.com>
+Last-Update: 2017-11-09
+
+--- a/ax25.3
++++ b/ax25.3
+@@ -61,7 +61,7 @@
+ .I ax1
+ and
+ .IR ax2 ,
+-that are in network format and determines wether they are identical,
++that are in network format and determines whether they are identical,
+ differ only by their SSIDs or are different.
+ .PP
+ The

@@ -1,0 +1,15 @@
+usr/include/netax25/ax25io.h 
+usr/include/netax25/axconfig.h 
+usr/include/netax25/axlib.h 
+usr/include/netax25/daemon.h 
+usr/include/netax25/mheard.h 
+usr/include/netax25/nrconfig.h 
+usr/include/netax25/procutils.h 
+usr/include/netax25/rsconfig.h 
+usr/include/netax25/ttyutils.h 
+usr/lib/libax25.a 
+usr/lib/libax25io.a 
+usr/lib/libax25.so 
+usr/lib/libax25io.so 
+usr/share/man/man3/ax25.3
+usr/share/man/man3/rose.3

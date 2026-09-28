@@ -1,0 +1,31 @@
+Source: libax25
+Section: hamradio
+Priority: optional
+Maintainer: Debian Hamradio Maintainers <debian-hams@lists.debian.org>
+Uploaders: Dave Hibberd <d@vehibberd.com>
+Build-Depends: debhelper-compat (= 13), zlib1g-dev
+Standards-Version: 4.6.2.0
+Vcs-Browser: https://salsa.debian.org/debian-hamradio-team/libax25
+Vcs-Git: https://salsa.debian.org/debian-hamradio-team/libax25.git
+Homepage: https://linux-ax25.in-berlin.de/wiki/Libax25
+Rules-Requires-Root: no
+
+Package: libax25
+Section: libs
+Architecture: linux-any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: ax25 library for hamradio applications
+ This library is for ham radio applications that use the ax25
+ protocol.  Included are routines to do ax25 address parsing, common
+ ax25 application config file parsing, etc.
+
+Package: libax25-dev
+Section: libdevel
+Architecture: linux-any
+Depends: ${misc:Depends}, libax25 (=${binary:Version})
+Description: ax25 library development files
+ This library is used for applications that use the ax25 protocol.
+ Included are routines to do ax25 address parsing, common ax25
+ application config file parsing, etc.  This development library
+ package includes some man pages and include files for compiling
+ applications which use libax25.

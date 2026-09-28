@@ -1,0 +1,10 @@
+include:
+  - https://salsa.debian.org/salsa-ci-team/pipeline/raw/master/salsa-ci.yml
+  - https://salsa.debian.org/salsa-ci-team/pipeline/raw/master/pipeline-jobs.yml
+  - https://hibby-guest.pages.debian.net/reverse-dependency-ci/libax25.yml
+
+variables:
+  SALSA_CI_ENABLE_REVERSE_DEPENDENCY_BUILD: 1
+
+reprotest:
+  extends: .test-reprotest-diffoscope

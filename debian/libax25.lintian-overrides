@@ -1,0 +1,9 @@
+# overrides for package-name-doesnt-match-sonames
+# The produced lib as given by objdump -p /usr/lib/libax25.so.0 | sed -n -e's/^[[:space:]]*SONAME[[:space:]]*//p' | sed -r -e's/([0-9])\.so\./\1-/; s/\.so(\.|$)//; y/_/-/; s/(.*)/\L&/' 
+# is "libax25-0" but the package is libax25
+# it is similar for libax25io:
+# objdump -p /usr/lib/libax25io.so.0 | sed -n -e's/^[[:space:]]*SONAME[[:space:]]*//p' | sed -r -e's/([0-9])\.so\./\1-/; s/\.so(\.|$)//; y/_/-/; s/(.*)/\L&/' 
+# gives libax25io0 but it is part of the libax25 package
+libax25: package-name-doesnt-match-sonames libax25-0 libax25io0
+# Symbols contain hyphen as upstream package name contains hyphen
+libax25: symbols-file-contains-debian-revision on symbol *
