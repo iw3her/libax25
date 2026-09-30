@@ -31,7 +31,8 @@ libax25.spec
 libax25io.la
 libtool
 ltmain.sh
-/m4
+/m4/*
+!/m4/.gitkeep
 missing
 stamp-h
 stamp-h1
