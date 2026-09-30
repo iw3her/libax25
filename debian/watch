@@ -1,0 +1,2 @@
+version=4
+https://linux-ax25.in-berlin.de/pub/libax25/libax25-(\d.*)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))

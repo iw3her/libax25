@@ -1,0 +1,11 @@
+usr/lib/libax25.so.0.0.0
+usr/lib/libax25io.so.0.0.0 
+usr/lib/libax25.so.0
+usr/lib/libax25io.so.0 
+usr/share/man/man5/axports.5
+usr/share/man/man5/nrports.5
+usr/share/man/man5/rsports.5
+axports etc/ax25
+nrports etc/ax25
+rsports etc/ax25
+
