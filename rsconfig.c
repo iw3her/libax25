@@ -230,6 +230,7 @@ int rs_config_load_ports(void)
 		s = fgets(buffer, sizeof(buffer), fp);
 		/* .. then network interface names */
 		while (!feof(fp)) {
+			size_t len;
 			if (!fgets(buffer, sizeof(buffer), fp))
 				break;
 			s = strchr(buffer, ':');
@@ -238,10 +239,10 @@ int rs_config_load_ports(void)
 			while (isspace(*s & 0xff)) ++s;
 
 			memset(&ifr, 0, sizeof(ifr));
-			if (strlen(s) >= IFNAMSIZ)
-				unreachable();
-			strncpy(ifr.ifr_name, s, IFNAMSIZ-1);
-			ifr.ifr_name[IFNAMSIZ-1] = 0;
+			len = strlen(s);
+			if (len >= IFNAMSIZ)
+				continue;
+			memcpy(ifr.ifr_name, s, len + 1);
 
 			if (ioctl(fd, SIOCGIFHWADDR, &ifr) < 0) {
 				fprintf(stderr, "rsconfig: SIOCGIFHWADDR: %s\n", strerror(errno));
