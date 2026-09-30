@@ -8,7 +8,6 @@ AC_CONFIG_HEADERS(config.h)
 
 dnl Checks for programs.
 AC_PROG_CC
-AC_PROG_GCC_TRADITIONAL
 LT_INIT
 
 dnl Checks for libraries.
@@ -17,7 +16,6 @@ AC_CHECK_FUNC(setsid,, AC_MSG_ERROR([setsid not found]))
 AC_CHECK_FUNCS(socket strdup strerror strspn)
 
 dnl Checks for header files.
-AC_HEADER_STDC
 AC_CHECK_HEADERS(fcntl.h sys/file.h sys/ioctl.h unistd.h)
 AC_CHECK_HEADER([zlib.h], AC_CHECK_LIB(z, zlibVersion,Z_LIB="-lz",Z_LIB=))
 AC_SUBST(Z_LIB, [$Z_LIB])
