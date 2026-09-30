@@ -1,3 +1,14 @@
+libax25 (0.0.12-rc5+git20250922+50f8c9b+stackax25.3-1) UNRELEASED; urgency=medium
+
+  * Integrate the stackAX25 upstream-fix series:
+    - handle overlong interface names without undefined behavior;
+    - provide the declared Autotools macro directory;
+    - remove obsolete Autoconf compatibility checks.
+  * Retain the stackAX25 Debian packaging based on the LinuxHam
+    50f8c9b snapshot.
+
+ -- Lorenzo <iw3her.lorenzo@gmail.com>  Wed, 30 Sep 2026 12:57:53 +0200
+
 libax25 (0.0.12-rc5+git20250922+50f8c9b-1) UNRELEASED; urgency=medium
 
   * Import LinuxHam snapshot 50f8c9b (2025-09-22).
